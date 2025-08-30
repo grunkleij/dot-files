@@ -1,14 +1,15 @@
 * {
-    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-family: "FiraCode Nerd Font", sans-serif;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 window#waybar {
-    background: transparent;
+    background:#2a2242;
     color: #ebdbb2; /* Gruvbox light text */
+    border: 2px solid #1e1e2e;
     border-radius: 9px;
-    margin: 12px 100px;
+    margin: 10px 100px;
 }
 
 /* Base module styling */
@@ -42,44 +43,45 @@ window#waybar {
 /* Specific styling for launcher */
 #custom-launcher {
     background-color: #1e1e2e;
-    color: #cc241d;
+    color: #b4befe;
     border-radius: 6px;
-    border: solid 2px #83a598;
-    padding: 2px 6px;
-    margin: 6px 4px;
+    /*border: solid 2px #b4befe;*/
+    padding: 4px 8px;
+    margin: 6px;
 }
 
 #mpd {
     background-color: #1e1e2e;
     color: #cc241d;
     border-radius: 6px;
-    padding: 2px 7px;
-    margin: 6px 4px;
+    /* padding: 2px 7px; */
+    margin:5px;
+
 }
+
 
 #window {
     background-color: #1e1e2e;
-    border: solid 2px #83a598;
-    color: #cc241d;
+    /*border: solid 2px #b4befe;*/
+    color: #b4befe;
     border-radius: 6px;
-    padding: 2px 2px;
-    margin: 2px 2px;
+     padding: 2px 3px;
+     margin: 5px;
 }
 
 /* Center module container */
 .modules-center {
     background-color: #1e1e2e;
-    border: solid 2px #83a598;
-    color: #cc241d;
+    /*border: solid 2px #b4befe;*/
+    color: #b4befe;
     border-radius: 6px;
-    padding: 2px 3px;
-    margin: 3px 3px;
+    /* padding: 2px 3px; */
+    margin: 5px;
 }
 
 /* Right-aligned modules */
 .modules-right {
-    background-color: #1e1e2e;
-    border: solid 2px #83a598;
+    /* background-color: #1e1e2e; */
     border-radius: 6px;
     padding: 2px 3px;
     margin: 3px 3px;
@@ -89,9 +91,9 @@ window#waybar {
 #workspaces {
     background-color: #1e1e2e;
     border-radius: 6px;
-    border: solid 2px #83a598;
+    /*border: solid 2px #b4befe;*/
     padding: 0;
-    margin: 3px 3px;
+    margin: 5px;
 }
 
 /* Workspace buttons */
@@ -100,7 +102,7 @@ window#waybar {
     margin: 0;
     border: none;
     background-color: transparent;
-    color: #458588;
+    color: #464b6f;
     border-radius: 0;
 }
 
@@ -124,39 +126,68 @@ window#waybar {
 #workspaces button.focused,
 #workspaces button.active {
     background-color: #1e1e2e;
-    color: #cc241d;
+    color: #b4befe;
 }
 
 /* Urgent workspace */
 #workspaces button.urgent {
     background-color: #cc241d;
+    
     color: #fbf1c7;
 }
 
 /* Module-specific coloring */
 #backlight {
     background-color: #1e1e2e;
-    color: #98971a;
+        border-radius: 6px;
+        margin: 2px;
+
+    color: #b4befe;
 }
 
 #mpd {
     background-color: #1e1e2e;
-    color: #98971a;
+    color: #b4befe;
 }
 
 #window {
     background-color: #1e1e2e;
-    color: #458588;
+    
+    color: #b4befe;
 }
 
 #memory {
     background-color: #1e1e2e;
-    color: #d65d0e;
+        border-radius: 6px;
+        margin: 2px;
+
+    color: #b4befe;
 }
 
 #battery {
     background-color: #1e1e2e;
-    color: #b16286;
+        border-radius: 6px;
+        margin: 2px;
+
+    color: #b4befe;
+}
+
+#custom-power {
+    background-color: #1e1e2e;
+        border-radius: 6px;
+        margin: 2px;
+
+    color: #b4befe;
+
+}
+
+#power-profiles-daemon{
+  background-color: #1e1e2e;
+      border-radius: 6px;
+      margin: 2px;
+
+    color: #b4befe;
+
 }
 
 #battery.charging,
@@ -177,13 +208,23 @@ window#waybar {
 
 #network {
     background-color: #1e1e2e;
-    color: #d79921;
+        border-radius: 6px;
+
+    color: #b4befe;
 }
 
 #pulseaudio {
     background-color: #1e1e2e;
-    color: #458588;
+        border-radius: 6px;
+
+    color: #b4befe;
 }
+
+
+/* make the pulseaudio slider look like a bar */
+
+
+
 
 #pulseaudio.muted {
     background-color: #1e1e2e;

@@ -19,6 +19,8 @@
         "memory",
         "backlight",
         "battery",
+        "power-profiles-daemon",
+        "custom/power"
     ],
     // Modules configuration
     "cava": {
@@ -35,8 +37,8 @@
 
       "custom/launcher":{
             "format": " ",
-            "on-click": "rofi -show drun",
-            "on-click-right": "killall rofi"
+            "on-click": "wofi --show drun",
+            "on-click-right": "killall wofi"
       },
 
       "hyprland/workspaces": {
@@ -126,7 +128,8 @@
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
-    "battery": {
+
+     "battery": {
         "states": {
             "warning": 30,
             "critical": 15
@@ -138,26 +141,33 @@
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
     },
-    "power-profiles-daemon": {
-        "format": "{icon}",
-        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-        "tooltip": true,
-        "format-icons": {
-            "default": "",
-            "performance": "",
-            "balanced": "",
-            "power-saver": ""
-        }
-    },
+ 
+      "power-profiles-daemon": {
+       "format": "{icon}",
+       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+       "inerval":2,
+       "tooltip": true,
+        "on-click": "powerprofilesctl set performance",
+   "on-click-right": "powerprofilesctl set power-saver",
+   "on-click-middle": "powerprofilesctl set balanced",
+       "format-icons": {
+           "default": "",
+           "performance": "",
+           "balanced": "",
+           "power-saver": ""
+       }
+   },
     "network": {
         "format-wifi": "{icon} {essid}",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}",
         "interval": 5,
-        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+        "on-click":"iwgtk",
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
+          "tooltip-format": "{icon} {desc} // {volume}%",
         "format-muted": "󰝟  {volume}%",
         "format-bluetooth": "{icon} {volume}%",
         "format-bluetooth-muted": " {volume}%",
@@ -169,17 +179,18 @@
         },
         "on-click": "pavucontrol"
     },
+   "pulseaudio/slider": {
+  "min": 5,
+  "max": 100,
+  "rotate": 0,
+  "device": "pulseaudio",
+  "scroll-step": 1
+},
+
     "custom/power": {
         "format": "⏻ ",
         "tooltip": false,
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/power_menu.xml",
-        "menu-actions": {
-            "shutdown": "shutdown",
-            "reboot": "reboot",
-            "suspend": "systemctl suspend",
-            "hibernate": "systemctl hibernate"
-        }
+        "on-click":"wlogout"
     }
 }
 
