@@ -6,18 +6,19 @@
     "spacing": 2, // Gaps between modules
     "modules-left": [
         "custom/launcher",
-        "hyprland/workspaces",
+        "clock",
+        "group/backlight",
         "hyprland/window"
     ],
     "modules-center": [
-        "clock"
+        
+        "hyprland/workspaces"
     ],
     "modules-right": [
-        "group/volume",
         "custom/speed",
         "network",
         "memory",
-        "group/backlight",
+        "group/volume",
         "battery",
         "power-profiles-daemon",
         "custom/power"

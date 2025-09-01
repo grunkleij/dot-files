@@ -47,19 +47,28 @@ window#waybar {
 #custom-launcher {
     background-color: #1e1e2e;
     color: #b4befe;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     /*border: solid 2px #b4befe;*/
     padding: 4px 8px;
-    margin: 6px;
+    margin: 2px;
 }
 
 #mpd {
     background-color: #1e1e2e;
     color: #cc241d;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     /* padding: 2px 7px; */
-    margin: 5px;
+    margin: 2px;
 
+}
+
+#clock{
+    background-color: #1e1e2e;
+    /*border: solid 2px #b4befe;*/
+    color: #b4befe;
+    /* border-radius: 6px; */
+    padding: 2px 6px;
+    margin: 2px;
 }
 
 
@@ -67,9 +76,9 @@ window#waybar {
     background-color: #1e1e2e;
     /*border: solid 2px #b4befe;*/
     color: #b4befe;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     padding: 2px 3px;
-    margin: 5px;
+    margin: 2px;
 }
 
 /* Center module container */
@@ -77,15 +86,21 @@ window#waybar {
     background-color: #1e1e2e;
     /*border: solid 2px #b4befe;*/
     color: #b4befe;
-    border-radius: 6px;
-    /* padding: 2px 3px; */
-    margin: 5px;
+     /* border-radius: 6px; */ 
+    padding: 2px 3px;
+    margin: 2px;
 }
 
 /* Right-aligned modules */
 .modules-right {
     /* background-color: #1e1e2e; */
-    border-radius: 6px;
+    /* border-radius: 6px; */
+    padding: 2px 3px;
+    margin: 3px 3px;
+}
+
+.modules-left{
+    /* border-radius: 6px; */
     padding: 2px 3px;
     margin: 3px 3px;
 }
@@ -93,7 +108,7 @@ window#waybar {
 /* Workspaces container */
 #workspaces {
     background-color: #1e1e2e;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     /*border: solid 2px #b4befe;*/
     padding: 0;
     margin: 5px;
@@ -141,13 +156,13 @@ window#waybar {
 }
 
 /* Module-specific coloring */
-/* #backlight {
+ #backlight {
     background-color: #1e1e2e;
-        border-radius: 6px;
+        /* border-radius: 6px; */
         margin: 2px;
 
     color: #b4befe;
-} */
+} 
 
 
 
@@ -164,7 +179,7 @@ window#waybar {
 
 /* Style for the icon and % text part */
 #backlight {
-   border-radius: 6px;
+   /* border-radius: 6px; */
     /* This acts as the opening bracket "[" */
     /* border-left: 2px solid #b4befe; */
     /* padding-left: 8px; */
@@ -186,11 +201,11 @@ window#waybar {
     border: none;
 
     /* Base color for the empty part */
-    background-color: #45475a;
+    background-color: #1e1e2e;
     /* This gradient creates the dotted "░" pattern */
     background-image: repeating-radial-gradient(circle at center,
             #b4befe,
-            #b4befe 1px,
+            #b4befe 0.5px,
             transparent 1px,
             transparent 100%);
     background-size: 3px 3px;
@@ -231,7 +246,7 @@ window#waybar {
 
 #memory {
     background-color: #1e1e2e;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     /* margin: 2px; */
 
     color: #b4befe;
@@ -239,7 +254,7 @@ window#waybar {
 
 #battery {
     background-color: #1e1e2e;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     /* margin: 2px; */
 
     color: #b4befe;
@@ -247,7 +262,7 @@ window#waybar {
 
 #custom-power {
     background-color: #1e1e2e;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     margin: 2px;
 
     color: #b4befe;
@@ -256,7 +271,7 @@ window#waybar {
 
 #power-profiles-daemon {
     background-color: #1e1e2e;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     margin: 2px;
 
     color: #b4befe;
@@ -281,7 +296,7 @@ window#waybar {
 
 #network {
     background-color: #1e1e2e;
-    border-radius: 6px;
+    /* border-radius: 6px; */
 
     color: #b4befe;
 }
@@ -324,11 +339,11 @@ window#waybar {
     border: none;
 
     /* Base color for the empty part */
-    background-color: #45475a;
+    background-color: #1e1e2e;
     /* This gradient creates the dotted "░" pattern */
     background-image: repeating-radial-gradient(circle at center,
             #b4befe,
-            #b4befe 1px,
+            #b4befe 0.5px,
             transparent 1px,
             transparent 100%);
     background-size: 3px 3px;
