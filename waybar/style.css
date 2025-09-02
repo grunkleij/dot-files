@@ -5,10 +5,10 @@
 }
 
 window#waybar {
-    background: #2a2242;
-    color: #ebdbb2;
+    background: #2c3235;
+    color: #89c2d9;
     /* Gruvbox light text */
-    border: 2px solid #1e1e2e;
+    border: 2px solid #212c31;
     /* border-radius: 9px; */
     margin: 10px 100px;
 }
@@ -45,16 +45,16 @@ window#waybar {
 
 /* Specific styling for launcher */
 #custom-launcher {
-    background-color: #1e1e2e;
-    color: #b4befe;
+    background-color: #212c31;
+    color: #89c2d9;
     /* border-radius: 6px; */
-    /*border: solid 2px #b4befe;*/
+    /*border: solid 2px #89c2d9;*/
     padding: 4px 8px;
     margin: 2px;
 }
 
 #mpd {
-    background-color: #1e1e2e;
+    background-color: #212c31;
     color: #cc241d;
     /* border-radius: 6px; */
     /* padding: 2px 7px; */
@@ -63,9 +63,9 @@ window#waybar {
 }
 
 #clock{
-    background-color: #1e1e2e;
-    /*border: solid 2px #b4befe;*/
-    color: #b4befe;
+    background-color: #212c31;
+    /*border: solid 2px #89c2d9;*/
+    color: #89c2d9;
     /* border-radius: 6px; */
     padding: 2px 6px;
     margin: 2px;
@@ -73,9 +73,9 @@ window#waybar {
 
 
 #window {
-    background-color: #1e1e2e;
-    /*border: solid 2px #b4befe;*/
-    color: #b4befe;
+    background-color: #212c31;
+    /*border: solid 2px #89c2d9;*/
+    color: #89c2d9;
     /* border-radius: 6px; */
     padding: 2px 3px;
     margin: 2px;
@@ -83,9 +83,9 @@ window#waybar {
 
 /* Center module container */
 .modules-center {
-    background-color: #1e1e2e;
-    /*border: solid 2px #b4befe;*/
-    color: #b4befe;
+    background-color: #212c31;
+    /*border: solid 2px #89c2d9;*/
+    color: #89c2d9;
      /* border-radius: 6px; */ 
     padding: 2px 3px;
     margin: 2px;
@@ -93,7 +93,7 @@ window#waybar {
 
 /* Right-aligned modules */
 .modules-right {
-    /* background-color: #1e1e2e; */
+    /* background-color: #212c31; */
     /* border-radius: 6px; */
     padding: 2px 3px;
     margin: 3px 3px;
@@ -107,9 +107,9 @@ window#waybar {
 
 /* Workspaces container */
 #workspaces {
-    background-color: #1e1e2e;
+    background-color: #212c31;
     /* border-radius: 6px; */
-    /*border: solid 2px #b4befe;*/
+    /*border: solid 2px #89c2d9;*/
     padding: 0;
     margin: 5px;
 }
@@ -120,7 +120,7 @@ window#waybar {
     margin: 0;
     border: none;
     background-color: transparent;
-    color: #464b6f;
+    color: #4b6563;
     border-radius: 0;
 }
 
@@ -144,8 +144,8 @@ window#waybar {
 /* Focused/active */
 #workspaces button.focused,
 #workspaces button.active {
-    background-color: #1e1e2e;
-    color: #b4befe;
+    background-color: #212c31;
+    color: #89c2d9;
 }
 
 /* Urgent workspace */
@@ -157,11 +157,11 @@ window#waybar {
 
 /* Module-specific coloring */
  #backlight {
-    background-color: #1e1e2e;
+    background-color: #212c31;
         /* border-radius: 6px; */
         margin: 2px;
 
-    color: #b4befe;
+    color: #89c2d9;
 } 
 
 
@@ -172,8 +172,8 @@ window#waybar {
 /* Basic container for icon and slider */
 #backlight,
 #backlight-slider {
-  background-color: #1e1e2e;
-  color: #b4befe;
+  background-color: #212c31;
+  color: #89c2d9;
   padding: 1px 5px;
 }
 
@@ -181,7 +181,7 @@ window#waybar {
 #backlight {
    /* border-radius: 6px; */
     /* This acts as the opening bracket "[" */
-    /* border-left: 2px solid #b4befe; */
+    /* border-left: 2px solid #89c2d9; */
     /* padding-left: 8px; */
 }
 
@@ -201,11 +201,11 @@ window#waybar {
     border: none;
 
     /* Base color for the empty part */
-    background-color: #1e1e2e;
+    background-color: #212c31;
     /* This gradient creates the dotted "░" pattern */
     background-image: repeating-radial-gradient(circle at center,
-            #b4befe,
-            #b4befe 0.5px,
+            #89c2d9,
+            #89c2d9 0.5px,
             transparent 1px,
             transparent 100%);
     background-size: 3px 3px;
@@ -213,7 +213,7 @@ window#waybar {
 
 /* The slider's highlight (the filled "█" part) */
 #backlight-slider highlight {
-  background-color: #b4befe;
+  background-color: #89c2d9;
     border: none;
     border-radius: 0;
 }
@@ -234,54 +234,61 @@ window#waybar {
 
 
 #mpd {
-    background-color: #1e1e2e;
-    color: #b4befe;
+    background-color: #212c31;
+    color: #89c2d9;
 }
 
 #window {
-    background-color: #1e1e2e;
+    background-color: #212c31;
 
-    color: #b4befe;
+    color: #89c2d9;
 }
 
 #memory {
-    background-color: #1e1e2e;
+    background-color: #212c31;
     /* border-radius: 6px; */
     /* margin: 2px; */
 
-    color: #b4befe;
+    color: #89c2d9;
+     padding: 2px 6px;
+    margin: 2px;
 }
 
 #battery {
-    background-color: #1e1e2e;
+    background-color: #212c31;
     /* border-radius: 6px; */
     /* margin: 2px; */
 
-    color: #b4befe;
+    color: #89c2d9;
+     padding: 2px 6px;
+    margin: 2px;
 }
 
 #custom-power {
-    background-color: #1e1e2e;
+    background-color: #212c31;
     /* border-radius: 6px; */
     margin: 2px;
 
-    color: #b4befe;
+    color: #89c2d9;
+     /* padding: 2px 6px; */
+    margin: 2px;
 
 }
 
 #power-profiles-daemon {
-    background-color: #1e1e2e;
+    background-color: #212c31;
     /* border-radius: 6px; */
     margin: 2px;
 
-    color: #b4befe;
+    color: #89c2d9;
+
 
 }
 
 #battery.charging,
 #battery.plugged {
     color: #98971a;
-    background-color: #1e1e2e;
+    background-color: #212c31;
 }
 
 #battery.critical:not(.charging) {
@@ -295,39 +302,46 @@ window#waybar {
 }
 
 #network {
-    background-color: #1e1e2e;
+    background-color: #212c31;
     /* border-radius: 6px; */
 
-    color: #b4befe;
+    color: #89c2d9;
+        margin: 2px;
+
 }
 
 
 /* Common look */
 #pulseaudio,
 #pulseaudio-slider {
-    background-color: #1e1e2e;
+    background-color: #212c31;
     
-    color: #b4befe;
+    color: #89c2d9;
     padding: 2px 3px;
+    margin-top:2px;
+    margin-bottom: 2px;
+    
+        
+
 }
 
 /* Left side (icon + %) - WITH LEFT BORDER for the "[" */
 #pulseaudio {
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    /* border-top-left-radius: 6px; */
+    /* border-bottom-left-radius: 6px; */
     border-right: none;
     /* This acts as the opening bracket "[" */
-    /* border-left: 2px solid #b4befe; */
+    /* border-left: 2px solid #89c2d9; */
     padding-left: 8px;
     /* Add some space after the bracket */
 }
 
 /* Right side (slider) - WITH RIGHT BORDER for the "]" */
 #pulseaudio-slider {
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+    /* border-top-right-radius: 6px; */
+    /* border-bottom-right-radius: 6px; */
     /* This acts as the closing bracket "]" */
-    /* border-right: 2px solid #b4befe; */
+    /* border-right: 2px solid #89c2d9; */
 }
 
 /* --- THE ASCII PATTERN --- */
@@ -339,11 +353,11 @@ window#waybar {
     border: none;
 
     /* Base color for the empty part */
-    background-color: #1e1e2e;
+    background-color: #212c31;
     /* This gradient creates the dotted "░" pattern */
     background-image: repeating-radial-gradient(circle at center,
-            #b4befe,
-            #b4befe 0.5px,
+            #89c2d9,
+            #89c2d9 0.5px,
             transparent 1px,
             transparent 100%);
     background-size: 3px 3px;
@@ -351,7 +365,7 @@ window#waybar {
 
 #pulseaudio-slider highlight {
     /* This is the solid "█" part */
-    background-color: #b4befe;
+    background-color: #89c2d9;
     border: none;
     border-radius: 0;
 }
@@ -369,13 +383,13 @@ window#waybar {
 }
 
 #pulseaudio.muted {
-    background-color: #1e1e2e;
+    background-color: #212c31;
     color: #cc241d;
 }
 
 /* Cava Visualizer */
 #cava {
-    background-color: #1e1e2e;
+    background-color: #212c31;
     color: #689d6a;
     border-radius: 3px;
     font-family: "Iosevka Nerd Font";
@@ -387,7 +401,7 @@ window#waybar {
 @keyframes blink {
     to {
         background-color: #fbf1c7;
-        color: #1e1e2e;
+        color: #212c31;
     }
 }
 
