@@ -7,18 +7,17 @@
     "modules-left": [
         "custom/launcher",
         "clock",
-        "group/backlight",
+        "custom/brightness",
         "hyprland/window"
     ],
     "modules-center": [
-        
         "hyprland/workspaces"
     ],
     "modules-right": [
         "custom/speed",
         "network",
         "memory",
-        "group/volume",
+        "custom/volume",
         "battery",
         "power-profiles-daemon",
         "custom/power"
@@ -139,27 +138,32 @@
     //     "format": "{icon} {percent}%",
     //     "format-icons": ["", "", "", "", "", "", "", "", ""]
     // },
-    "backlight": {
-        "format": "{icon} {percent}%",
-         "format-icons": ["", "", "", "", "", "", "", "", ""],
-
-        "tooltip": false
+    //     "backlight": {
+    //         "format": "{icon} {percent}%",
+    //          "format-icons": ["", "", "", "", "", "", "", "", ""],
+    //         "tooltip": false
+    //     },
+    //     "backlight/slider": {
+    //     "min": 1,
+    //     "max": 100,
+    //     "orientation": "horizontal",
+    //     "scroll-step": 1
+    //     },
+    //     "group/backlight": {
+    //     "orientation": "horizontal",
+    //     "modules": [
+    //         "backlight",
+    //         "backlight/slider"
+    //     ]
+    // },
+    "custom/brightness": {
+        "exec": "~/.config/waybar/scripts/brightness.sh",
+        "return-type": "json",
+        "interval": 2,
+        // "on-click": "~/.config/waybar/scripts/brightness-toggle.sh",
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
     },
-    "backlight/slider": {
-    "min": 1,
-    "max": 100,
-    "orientation": "horizontal",
-    "scroll-step": 1
-    },
-
-    "group/backlight": {
-    "orientation": "horizontal",
-    "modules": [
-        "backlight",
-        "backlight/slider"
-    ]
-},
-
     "battery": {
         "states": {
             "warning": 30,
@@ -239,6 +243,14 @@
             "pulseaudio",
             "pulseaudio/slider"
         ]
+    },
+    "custom/volume": {
+        "exec": "~/.config/waybar/scripts/volume.sh",
+        "return-type": "json",
+        "interval": 1,
+        "on-click": "pavucontrol",
+        "on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     },
     "custom/power": {
         "format": "⏻ ",

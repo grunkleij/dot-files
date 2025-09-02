@@ -6,7 +6,7 @@
 
 window#waybar {
     background: #2c3235;
-    color: #89c2d9;
+    color: #56b6c2;
     /* Gruvbox light text */
     border: 2px solid #212c31;
     /* border-radius: 9px; */
@@ -29,10 +29,12 @@ window#waybar {
 #keyboard-state,
 #sway-language,
 #battery,
+#custom-volume,
 #clock,
 #backlight-slider ,
 #tray,
 #pulseaudio-slider ,
+#custom-brightness,
 #custom-launcher,
 #custom-power {
     background-color: transparent;
@@ -41,14 +43,15 @@ window#waybar {
     margin: 0;
     border: none;
     border-radius: 0;
+    border: 1px solid #56b6c2;
 }
 
 /* Specific styling for launcher */
 #custom-launcher {
     background-color: #212c31;
-    color: #89c2d9;
+    color: #56b6c2;
     /* border-radius: 6px; */
-    /*border: solid 2px #89c2d9;*/
+    /*border: solid 2px #56b6c2;*/
     padding: 4px 8px;
     margin: 2px;
 }
@@ -64,8 +67,8 @@ window#waybar {
 
 #clock{
     background-color: #212c31;
-    /*border: solid 2px #89c2d9;*/
-    color: #89c2d9;
+    /*border: solid 2px #56b6c2;*/
+    color: #56b6c2;
     /* border-radius: 6px; */
     padding: 2px 6px;
     margin: 2px;
@@ -74,8 +77,8 @@ window#waybar {
 
 #window {
     background-color: #212c31;
-    /*border: solid 2px #89c2d9;*/
-    color: #89c2d9;
+    /*border: solid 2px #56b6c2;*/
+    color: #56b6c2;
     /* border-radius: 6px; */
     padding: 2px 3px;
     margin: 2px;
@@ -84,12 +87,19 @@ window#waybar {
 /* Center module container */
 .modules-center {
     background-color: #212c31;
-    /*border: solid 2px #89c2d9;*/
-    color: #89c2d9;
-     /* border-radius: 6px; */ 
+    color: #56b6c2;
     padding: 2px 3px;
     margin: 2px;
+
+    background-image:
+        linear-gradient(to bottom, transparent 20%, #56b6c2 20%, #56b6c2 80%, transparent 80%),
+        linear-gradient(to bottom, transparent 20%, #56b6c2 20%, #56b6c2 80%, transparent 80%);
+    background-position: left center, right center;
+    background-repeat: no-repeat;
+    background-size: 2px 100%;
+    
 }
+
 
 /* Right-aligned modules */
 .modules-right {
@@ -109,7 +119,7 @@ window#waybar {
 #workspaces {
     background-color: #212c31;
     /* border-radius: 6px; */
-    /*border: solid 2px #89c2d9;*/
+    /*border: solid 2px #56b6c2;*/
     padding: 0;
     margin: 5px;
 }
@@ -145,7 +155,7 @@ window#waybar {
 #workspaces button.focused,
 #workspaces button.active {
     background-color: #212c31;
-    color: #89c2d9;
+    color: #56b6c2;
 }
 
 /* Urgent workspace */
@@ -155,93 +165,19 @@ window#waybar {
     color: #fbf1c7;
 }
 
-/* Module-specific coloring */
- #backlight {
-    background-color: #212c31;
-        /* border-radius: 6px; */
-        margin: 2px;
-
-    color: #89c2d9;
-} 
-
-
-
-
-/* --- SHARP ASCII-STYLE BACKLIGHT SLIDER (Matching Audio) --- */
-
-/* Basic container for icon and slider */
-#backlight,
-#backlight-slider {
-  background-color: #212c31;
-  color: #89c2d9;
-  padding: 1px 5px;
-}
-
-/* Style for the icon and % text part */
-#backlight {
-   /* border-radius: 6px; */
-    /* This acts as the opening bracket "[" */
-    /* border-left: 2px solid #89c2d9; */
-    /* padding-left: 8px; */
-}
-
-/* Style for the slider part */
-#backlight-slider {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  /* border-left: none; */
-}
-
-/* The slider's background trough (the empty "░" part) */
-#backlight-slider trough {
-   min-height: 1em;
-    border: none;
-    min-width: 70px;
-    border-radius: 0;
-    border: none;
-
-    /* Base color for the empty part */
-    background-color: #212c31;
-    /* This gradient creates the dotted "░" pattern */
-    background-image: repeating-radial-gradient(circle at center,
-            #89c2d9,
-            #89c2d9 0.5px,
-            transparent 1px,
-            transparent 100%);
-    background-size: 3px 3px;
-}
-
-/* The slider's highlight (the filled "█" part) */
-#backlight-slider highlight {
-  background-color: #89c2d9;
-    border: none;
-    border-radius: 0;
-}
-
-/* Hides the default slider knob */
-#backlight-slider slider {
-     opacity: 0;
-    background: none;
-    border: none;
-    min-width: 0;
-    box-shadow: none;
-    outline: none;
-    min-height: 0;
-    border-radius: 0;
-}
 
 
 
 
 #mpd {
     background-color: #212c31;
-    color: #89c2d9;
+    color: #56b6c2;
 }
 
 #window {
     background-color: #212c31;
 
-    color: #89c2d9;
+    color: #56b6c2;
 }
 
 #memory {
@@ -249,7 +185,7 @@ window#waybar {
     /* border-radius: 6px; */
     /* margin: 2px; */
 
-    color: #89c2d9;
+    color: #56b6c2;
      padding: 2px 6px;
     margin: 2px;
 }
@@ -259,7 +195,7 @@ window#waybar {
     /* border-radius: 6px; */
     /* margin: 2px; */
 
-    color: #89c2d9;
+    color: #56b6c2;
      padding: 2px 6px;
     margin: 2px;
 }
@@ -269,7 +205,7 @@ window#waybar {
     /* border-radius: 6px; */
     margin: 2px;
 
-    color: #89c2d9;
+    color: #56b6c2;
      /* padding: 2px 6px; */
     margin: 2px;
 
@@ -280,7 +216,7 @@ window#waybar {
     /* border-radius: 6px; */
     margin: 2px;
 
-    color: #89c2d9;
+    color: #56b6c2;
 
 
 }
@@ -305,9 +241,19 @@ window#waybar {
     background-color: #212c31;
     /* border-radius: 6px; */
 
-    color: #89c2d9;
+    color: #56b6c2;
         margin: 2px;
 
+}
+
+#custom-brightness{
+        background-color: #212c31;
+        margin:2px;
+}
+
+#custom-volume{
+        background-color: #212c31;
+        margin:2px;
 }
 
 
@@ -316,7 +262,7 @@ window#waybar {
 #pulseaudio-slider {
     background-color: #212c31;
     
-    color: #89c2d9;
+    color: #56b6c2;
     padding: 2px 3px;
     margin-top:2px;
     margin-bottom: 2px;
@@ -331,7 +277,7 @@ window#waybar {
     /* border-bottom-left-radius: 6px; */
     border-right: none;
     /* This acts as the opening bracket "[" */
-    /* border-left: 2px solid #89c2d9; */
+    /* border-left: 2px solid #56b6c2; */
     padding-left: 8px;
     /* Add some space after the bracket */
 }
@@ -341,7 +287,7 @@ window#waybar {
     /* border-top-right-radius: 6px; */
     /* border-bottom-right-radius: 6px; */
     /* This acts as the closing bracket "]" */
-    /* border-right: 2px solid #89c2d9; */
+    /* border-right: 2px solid #56b6c2; */
 }
 
 /* --- THE ASCII PATTERN --- */
@@ -356,8 +302,8 @@ window#waybar {
     background-color: #212c31;
     /* This gradient creates the dotted "░" pattern */
     background-image: repeating-radial-gradient(circle at center,
-            #89c2d9,
-            #89c2d9 0.5px,
+            #56b6c2,
+            #56b6c2 0.5px,
             transparent 1px,
             transparent 100%);
     background-size: 3px 3px;
@@ -365,7 +311,7 @@ window#waybar {
 
 #pulseaudio-slider highlight {
     /* This is the solid "█" part */
-    background-color: #89c2d9;
+    background-color: #56b6c2;
     border: none;
     border-radius: 0;
 }
