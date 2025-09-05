@@ -12,7 +12,7 @@
       <item>
         <attribute name="label">💤 Suspend</attribute>
         <attribute name="action">suspend</attribute>
-      </item>
+      </item>a
       <item>
         <attribute name="label">🧊 Hibernate</attribute>
         <attribute name="action">hibernate</attribute>

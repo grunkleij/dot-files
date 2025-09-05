@@ -7,6 +7,7 @@
     "modules-left": [
         "custom/launcher",
         "clock",
+        "bluetooth",
         "custom/brightness",
         "hyprland/window"
     ],
@@ -243,6 +244,16 @@
             "pulseaudio",
             "pulseaudio/slider"
         ]
+    },
+    "bluetooth": {
+        "format": "{icon}",
+        "format-icons": {
+            "enabled": "[  ]",
+            "disabled": "[ 󰂲 ]"
+        },
+        "on-click": "~/.config/waybar/scripts/bluetooth-toggle.sh",
+        "tooltip-format": "Bluetooth is {status}",
+        "interval": 5
     },
     "custom/volume": {
         "exec": "~/.config/waybar/scripts/volume.sh",

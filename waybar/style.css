@@ -32,6 +32,7 @@ window#waybar {
 #custom-volume,
 #clock,
 #backlight-slider ,
+#bluetooth,
 #tray,
 #pulseaudio-slider ,
 #custom-brightness,
@@ -172,6 +173,13 @@ window#waybar {
 #mpd {
     background-color: #212c31;
     color: #56b6c2;
+}
+
+#bluetooth{
+    background-color: #212c31;
+    color: #56b6c2;
+    margin:2px;
+    
 }
 
 #window {
