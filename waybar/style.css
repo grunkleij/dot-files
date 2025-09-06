@@ -31,10 +31,10 @@ window#waybar {
 #battery,
 #custom-volume,
 #clock,
-#backlight-slider ,
+#backlight-slider,
 #bluetooth,
 #tray,
-#pulseaudio-slider ,
+#pulseaudio-slider,
 #custom-brightness,
 #custom-launcher,
 #custom-power {
@@ -66,7 +66,7 @@ window#waybar {
 
 }
 
-#clock{
+#clock {
     background-color: #212c31;
     /*border: solid 2px #56b6c2;*/
     color: #56b6c2;
@@ -98,7 +98,7 @@ window#waybar {
     background-position: left center, right center;
     background-repeat: no-repeat;
     background-size: 2px 100%;
-    
+
 }
 
 
@@ -110,7 +110,7 @@ window#waybar {
     margin: 3px 3px;
 }
 
-.modules-left{
+.modules-left {
     /* border-radius: 6px; */
     padding: 2px 3px;
     margin: 3px 3px;
@@ -175,16 +175,15 @@ window#waybar {
     color: #56b6c2;
 }
 
-#bluetooth{
+#bluetooth {
     background-color: #212c31;
     color: #56b6c2;
-    margin:2px;
-    
+    margin: 2px;
+
 }
 
 #window {
     background-color: #212c31;
-
     color: #56b6c2;
 }
 
@@ -194,7 +193,7 @@ window#waybar {
     /* margin: 2px; */
 
     color: #56b6c2;
-     padding: 2px 6px;
+    padding: 2px 6px;
     margin: 2px;
 }
 
@@ -204,7 +203,7 @@ window#waybar {
     /* margin: 2px; */
 
     color: #56b6c2;
-     padding: 2px 6px;
+    padding: 2px 6px;
     margin: 2px;
 }
 
@@ -214,7 +213,7 @@ window#waybar {
     margin: 2px;
 
     color: #56b6c2;
-     /* padding: 2px 6px; */
+    /* padding: 2px 6px; */
     margin: 2px;
 
 }
@@ -250,18 +249,18 @@ window#waybar {
     /* border-radius: 6px; */
 
     color: #56b6c2;
-        margin: 2px;
+    margin: 2px;
 
 }
 
-#custom-brightness{
-        background-color: #212c31;
-        margin:2px;
+#custom-brightness {
+    background-color: #212c31;
+    margin: 2px;
 }
 
-#custom-volume{
-        background-color: #212c31;
-        margin:2px;
+#custom-volume {
+    background-color: #212c31;
+    margin: 2px;
 }
 
 
@@ -269,13 +268,13 @@ window#waybar {
 #pulseaudio,
 #pulseaudio-slider {
     background-color: #212c31;
-    
+
     color: #56b6c2;
     padding: 2px 3px;
-    margin-top:2px;
+    margin-top: 2px;
     margin-bottom: 2px;
-    
-        
+
+
 
 }
 
