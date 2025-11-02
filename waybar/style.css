@@ -230,7 +230,7 @@ window#waybar {
 
 #battery.charging,
 #battery.plugged {
-    color: #98971a;
+    color: #56b6c2;
     background-color: #212c31;
 }
 

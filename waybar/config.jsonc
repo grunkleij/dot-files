@@ -124,6 +124,7 @@
     },
     "memory": {
         "format": "󰍛{used: 0.2f} GB",
+        "on-click": "kitty -e sh -c 'btop'",
         "interval": 2,
     },
     "temperature": {
@@ -210,7 +211,7 @@
             "󰤥",
             "󰤨"
         ],
-        "on-click": "iwgtk",
+        "on-click": "kitty -e sh -c 'nmtui'"
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
