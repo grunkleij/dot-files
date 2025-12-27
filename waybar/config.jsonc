@@ -46,8 +46,8 @@
     },
     "custom/launcher": {
         "format": " ",
-        "on-click": "wofi --show drun",
-        "on-click-right": "killall wofi"
+        "on-click": "rofi -show drun -show-icons",
+        "on-click-right": "killall rofi"
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
