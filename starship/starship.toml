@@ -18,35 +18,35 @@ $lua\
 $docker_context\
 $line_break$character"""
 
-palette = 'nord'
+palette = 'mountain_mist'
 
-[palettes.nord]
-rosewater = "#f0c674"
-flamingo = "#cc6666"
-pink = "#b294bb"
-orange = "#de935f"
-red = "#cc6666"
-maroon = "#a54242"
-peach = "#d08770"
-yellow = "#f0c674"
-green = "#8abeb7"
-teal = "#8abeb7"
-sky = "#81a2be"
-sapphire = "#81a2be"
-blue = "#56b6c2"
-lavender = "#b48ead"
-text = "#d8dee9"
-subtext1 = "#e5e9f0"
-subtext0 = "#eceff4"
-overlay2 = "#4c566a"
-overlay1 = "#434c5e"
-overlay0 = "#3b4252"
-surface2 = "#2e3440"
-surface1 = "#2e3440"
-surface0 = "#2e3440"
-base = "#2e3440"
-mantle = "#3b4252"
-crust = "#434c5e"
+[palettes.mountain_mist]
+rosewater = "#c9dcd5"
+flamingo = "#a05050"
+pink = "#a89f9f"
+orange = "#a89070"
+red = "#a05050"
+maroon = "#907070"
+peach = "#b8c9a0"
+yellow = "#d4e5ba"
+green = "#7fb894"
+teal = "#7fa39a"
+sky = "#8aa6a0"
+sapphire = "#6b8a7f"
+blue = "#6b8a7f"
+lavender = "#9fc3ba"
+text = "#c9dcd5"
+subtext1 "#e8f3ee"
+subtext0 = "#9fd4b0"
+overlay2 = "#4a5550"
+overlay1 = "#3a4540"
+overlay0 = "#2d3832"
+surface2 = "#172e17"
+surface1 = "#161716"
+surface0 = "#161716"
+base = "#161716"
+mantle = "#2d3832"
+crust = "#3a4540"
 
 # OS Module
 [os]
@@ -56,20 +56,20 @@ style = "fg:text"
 [os.symbols]
 Windows = "󰍲"
 Ubuntu = "󰕈"
-SUSE = ""
+SUSE = ""
 Raspbian = "󰐿"
 Mint = "󰣭"
-Macos = ""
-Manjaro = ""
+Macos = ""
+Manjaro = ""
 Linux = "󰌽"
 Gentoo = "󰣨"
 Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
+Alpine = ""
+Amazon = ""
+Android = ""
 Arch = "󰣇"
 Artix = "󰣇"
-CentOS = ""
+CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
@@ -97,14 +97,14 @@ truncation_symbol = "…/"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
-"Downloads" = " "
+"Downloads" = " "
 "Music" = "󰝚 "
-"Pictures" = " "
+"Pictures" = " "
 "Developer" = "󰲋 "
 
 # Git Branch Module
 [git_branch]
-symbol = ""
+symbol = ""
 style = "fg:teal"
 format = '[[ $symbol $branch ](fg:green)]($style)'
 
@@ -115,55 +115,55 @@ format = '[[($all_status$ahead_behind )](fg:green)]($style)'
 
 # Node.js Module
 [nodejs]
-symbol = ""
+symbol = ""
 style = "fg:teal"
 format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
 # C Module
 [c]
-symbol = " "
+symbol = " "
 style = "fg:teal"
 format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
 # Rust Module
 [rust]
-symbol = ""
+symbol = ""
 style = "fg:teal"
 format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
 # Go Module
 [golang]
-symbol = ""
+symbol = ""
 style = "fg:teal"
 format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
 # PHP Module
 [php]
-symbol = ""
+symbol = ""
 style = "fg:teal"
 format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
 # Java Module
 [java]
-symbol = " "
+symbol = " "
 style = "fg:teal"
 format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
 # Kotlin Module
 [kotlin]
-symbol = ""
+symbol = ""
 style = "fg:teal"
 format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
 # Haskell Module
 [haskell]
-symbol = ""
+symbol = ""
 style = "fg:teal"
 format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
 # Python Module
 [python]
-symbol = ""
+symbol = ""
 style = "fg:teal"
 format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
@@ -175,7 +175,7 @@ format = '[[ $symbol( $version) ](fg:teal)]($style)'
 
 # Docker Context Module
 [docker_context]
-symbol = ""
+symbol = ""
 style = "fg:mantle"
 format = '[[ $symbol( $context) ](fg:color_bg3)]($style)'
 
@@ -184,7 +184,7 @@ format = '[[ $symbol( $context) ](fg:color_bg3)]($style)'
 disabled = false
 time_format = "%R"
 style = "fg:peach"
-format = '[[  $time ](fg:purple)]($style)'
+format = '[[  $time ](fg:purple)]($style)'
 
 # Line Break Module
 [line_break]
@@ -194,6 +194,5 @@ disabled = false
 [character]
 format = """
 [╰─$symbol](fg:overlay1) """
-success_symbol = '[](fg:bold text)'
+success_symbol = '[](fg:bold text)'
 error_symbol = '[×](fg:bold red)'
-
