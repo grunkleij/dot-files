@@ -38,7 +38,7 @@ if [ "$is_muted" = true ] || [ "$vol_int" -lt 10 ]; then
 elif [ "$vol_int" -lt 50 ]; then
   fg="#fab387" # orange
 else
-  fg="#56b6c2" # cyan
+  fg="#c9dcd5" # cyan
 fi
 
 # Tooltip text

@@ -1,3 +1,15 @@
+/* Color palette */
+@define-color bg_primary #161716;
+@define-color bg_secondary #172e17;
+@define-color bg_hover #4a5550;
+
+@define-color fg_primary #c9dcd5;
+@define-color fg_inactive #6b8a7f;
+@define-color fg_light #e8f3ee;
+
+@define-color accent_urgent #a05050;
+@define-color accent_light #e8f3ee;
+
 * {
     font-family: "FiraCode Nerd Font", sans-serif;
     font-weight: bold;
@@ -5,11 +17,10 @@
 }
 
 window#waybar {
-    background: #2c3235;
-    color: #56b6c2;
-    /* Gruvbox light text */
-    border: 2px solid #212c31;
-    /* border-radius: 9px; */
+    background: @bg_primary;
+    color: @fg_primary;
+    border: 2px solid @bg_secondary;
+    border-radius: 9px;
     margin: 10px 100px;
 }
 
@@ -22,7 +33,6 @@ window#waybar {
 #network,
 #power-profiles-daemon,
 #cpu,
-#mpd,
 #memory,
 #temperature,
 #backlight,
@@ -44,83 +54,73 @@ window#waybar {
     margin: 0;
     border: none;
     border-radius: 0;
-    border: 1px solid #56b6c2;
+    border: 1px solid @fg_primary;
 }
 
 /* Specific styling for launcher */
 #custom-launcher {
-    background-color: #212c31;
-    color: #56b6c2;
-    /* border-radius: 6px; */
-    /*border: solid 2px #56b6c2;*/
+    background-color: @bg_secondary;
+    color: @fg_primary;
+    border-radius: 6px;
     padding: 4px 8px;
     margin: 2px;
 }
 
 #mpd {
-    background-color: #212c31;
-    color: #cc241d;
-    /* border-radius: 6px; */
-    /* padding: 2px 7px; */
+    background-color: @bg_secondary;
+    color: @accent_urgent;
+    border-radius: 6px;
     margin: 2px;
-
 }
 
 #clock {
-    background-color: #212c31;
-    /*border: solid 2px #56b6c2;*/
-    color: #56b6c2;
-    /* border-radius: 6px; */
+    background-color: @bg_secondary;
+    color: @fg_primary;
+    border-radius: 6px;
     padding: 2px 6px;
     margin: 2px;
 }
 
-
 #window {
-    background-color: #212c31;
-    /*border: solid 2px #56b6c2;*/
-    color: #56b6c2;
-    /* border-radius: 6px; */
+    background-color: @bg_secondary;
+    color: @fg_primary;
+    border-radius: 6px;
     padding: 2px 3px;
     margin: 2px;
 }
 
 /* Center module container */
 .modules-center {
-    background-color: #212c31;
-    color: #56b6c2;
+    background-color: @bg_secondary;
+    color: @fg_primary;
     padding: 2px 3px;
     margin: 2px;
-
+    border-radius: 6px;
     background-image:
-        linear-gradient(to bottom, transparent 20%, #56b6c2 20%, #56b6c2 80%, transparent 80%),
-        linear-gradient(to bottom, transparent 20%, #56b6c2 20%, #56b6c2 80%, transparent 80%);
+        linear-gradient(to bottom, transparent 20%, @fg_primary 20%, @fg_primary 80%, transparent 80%),
+        linear-gradient(to bottom, transparent 20%, @fg_primary 20%, @fg_primary 80%, transparent 80%);
     background-position: left center, right center;
     background-repeat: no-repeat;
     background-size: 2px 100%;
-
 }
-
 
 /* Right-aligned modules */
 .modules-right {
-    /* background-color: #212c31; */
-    /* border-radius: 6px; */
+    border-radius: 6px;
     padding: 2px 3px;
     margin: 3px 3px;
 }
 
 .modules-left {
-    /* border-radius: 6px; */
+    border-radius: 6px;
     padding: 2px 3px;
     margin: 3px 3px;
 }
 
 /* Workspaces container */
 #workspaces {
-    background-color: #212c31;
-    /* border-radius: 6px; */
-    /*border: solid 2px #56b6c2;*/
+    background-color: @bg_secondary;
+    border-radius: 6px;
     padding: 0;
     margin: 5px;
 }
@@ -131,7 +131,7 @@ window#waybar {
     margin: 0;
     border: none;
     background-color: transparent;
-    color: #4b6563;
+    color: @fg_inactive;
     border-radius: 0;
 }
 
@@ -148,95 +148,69 @@ window#waybar {
 
 /* Hover */
 #workspaces button:hover {
-    background-color: #3c3836;
-    color: #ebdbb2;
+    background-color: @bg_hover;
+    color: @fg_light;
 }
 
 /* Focused/active */
 #workspaces button.focused,
 #workspaces button.active {
-    background-color: #212c31;
-    color: #56b6c2;
+    background-color: @bg_secondary;
+    color: @fg_primary;
 }
 
 /* Urgent workspace */
 #workspaces button.urgent {
-    background-color: #cc241d;
-
-    color: #fbf1c7;
-}
-
-
-
-
-
-#mpd {
-    background-color: #212c31;
-    color: #56b6c2;
+    background-color: @accent_urgent;
+    color: @accent_light;
 }
 
 #bluetooth {
-    background-color: #212c31;
-    color: #56b6c2;
+    background-color: @bg_secondary;
+    color: @fg_primary;
+    border-radius: 6px;
     margin: 2px;
-
-}
-
-#window {
-    background-color: #212c31;
-    color: #56b6c2;
 }
 
 #memory {
-    background-color: #212c31;
-    /* border-radius: 6px; */
-    /* margin: 2px; */
-
-    color: #56b6c2;
+    background-color: @bg_secondary;
+    color: @fg_primary;
+    border-radius: 6px;
     padding: 2px 6px;
     margin: 2px;
 }
 
 #battery {
-    background-color: #212c31;
-    /* border-radius: 6px; */
-    /* margin: 2px; */
-
-    color: #56b6c2;
+    background-color: @bg_secondary;
+    color: @fg_primary;
+    border-radius: 6px;
     padding: 2px 6px;
     margin: 2px;
 }
 
 #custom-power {
-    background-color: #212c31;
-    /* border-radius: 6px; */
+    background-color: @bg_secondary;
+    color: @fg_primary;
+    border-radius: 6px;
     margin: 2px;
-
-    color: #56b6c2;
-    /* padding: 2px 6px; */
-    margin: 2px;
-
 }
 
 #power-profiles-daemon {
-    background-color: #212c31;
-    /* border-radius: 6px; */
+    background-color: @bg_secondary;
+    color: @fg_primary;
+    border-radius: 6px;
     margin: 2px;
-
-    color: #56b6c2;
-
-
 }
 
 #battery.charging,
 #battery.plugged {
-    color: #56b6c2;
-    background-color: #212c31;
+    color: @fg_primary;
+    background-color: @bg_secondary;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #cc241d;
-    color: #ebdbb2;
+    background-color: @accent_urgent;
+    color: @fg_light;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -245,56 +219,46 @@ window#waybar {
 }
 
 #network {
-    background-color: #212c31;
-    /* border-radius: 6px; */
-
-    color: #56b6c2;
+    background-color: @bg_secondary;
+    color: @fg_primary;
+    border-radius: 6px;
     margin: 2px;
-
 }
 
 #custom-brightness {
-    background-color: #212c31;
+    background-color: @bg_secondary;
+    border-radius: 6px;
     margin: 2px;
 }
 
 #custom-volume {
-    background-color: #212c31;
+    background-color: @bg_secondary;
+    border-radius: 6px;
     margin: 2px;
 }
-
 
 /* Common look */
 #pulseaudio,
 #pulseaudio-slider {
-    background-color: #212c31;
-
-    color: #56b6c2;
+    background-color: @bg_secondary;
+    color: @fg_primary;
     padding: 2px 3px;
     margin-top: 2px;
     margin-bottom: 2px;
-
-
-
 }
 
-/* Left side (icon + %) - WITH LEFT BORDER for the "[" */
+/* Left side (icon + %) */
 #pulseaudio {
-    /* border-top-left-radius: 6px; */
-    /* border-bottom-left-radius: 6px; */
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     border-right: none;
-    /* This acts as the opening bracket "[" */
-    /* border-left: 2px solid #56b6c2; */
     padding-left: 8px;
-    /* Add some space after the bracket */
 }
 
-/* Right side (slider) - WITH RIGHT BORDER for the "]" */
+/* Right side (slider) */
 #pulseaudio-slider {
-    /* border-top-right-radius: 6px; */
-    /* border-bottom-right-radius: 6px; */
-    /* This acts as the closing bracket "]" */
-    /* border-right: 2px solid #56b6c2; */
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 /* --- THE ASCII PATTERN --- */
@@ -303,28 +267,22 @@ window#waybar {
     border: none;
     min-width: 70px;
     border-radius: 0;
-    border: none;
-
-    /* Base color for the empty part */
-    background-color: #212c31;
-    /* This gradient creates the dotted "░" pattern */
+    background-color: @bg_secondary;
     background-image: repeating-radial-gradient(circle at center,
-            #56b6c2,
-            #56b6c2 0.5px,
+            @fg_primary,
+            @fg_primary 0.5px,
             transparent 1px,
             transparent 100%);
     background-size: 3px 3px;
 }
 
 #pulseaudio-slider highlight {
-    /* This is the solid "█" part */
-    background-color: #56b6c2;
+    background-color: @fg_primary;
     border: none;
     border-radius: 0;
 }
 
 #pulseaudio-slider slider {
-    /* Keep the knob hidden */
     opacity: 0;
     background: none;
     border: none;
@@ -336,15 +294,15 @@ window#waybar {
 }
 
 #pulseaudio.muted {
-    background-color: #212c31;
-    color: #cc241d;
+    background-color: @bg_secondary;
+    color: @accent_urgent;
 }
 
 /* Cava Visualizer */
 #cava {
-    background-color: #212c31;
+    background-color: @bg_secondary;
     color: #689d6a;
-    border-radius: 3px;
+    border-radius: 6px;
     font-family: "Iosevka Nerd Font";
     border: solid 2px;
     padding: 2px 12px;
@@ -353,8 +311,8 @@ window#waybar {
 
 @keyframes blink {
     to {
-        background-color: #fbf1c7;
-        color: #212c31;
+        background-color: @accent_light;
+        color: @bg_secondary;
     }
 }
 

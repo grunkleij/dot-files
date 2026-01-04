@@ -26,7 +26,7 @@ if [ "$percent" -lt 20 ]; then
 elif [ "$percent" -lt 55 ]; then
     fg="#fab387"  # orange
 else
-    fg="#56b6c2"  # cyan
+    fg="#c9dcd5"  # cyan
 fi
 
 # Device name (first column from brightnessctl --machine-readable)
