@@ -20,7 +20,7 @@ window#waybar {
     background: @bg_primary;
     color: @fg_primary;
     border: 2px solid @bg_secondary;
-    border-radius: 9px;
+    border-radius: 0px 0px 9px 9px;
     margin: 10px 100px;
 }
 
