@@ -9,3 +9,5 @@ eval "$(starship init zsh)"
 
 
 
+
+export PATH=$PATH:/home/grunkleij/.spicetify
