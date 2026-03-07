@@ -167,7 +167,7 @@ blah {
     /* * !!! CHANGE THIS PATH !!! 
      * Set this to the full path of your wallpaper
      */
-    background-image: url("~/the-thing/wallpaper/ye.jpg");
+    background-image: url("~/the-thing/wallpaper/akasham-rofi.jpg");
     
     
     border-radius: 0px;

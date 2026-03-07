@@ -2,6 +2,8 @@
     font-family: "FiraCode Nerd Font", sans-serif;
     font-weight: bold;
     font-size: 11px;
+    /* Smooth transitions for colors and shadow highlights */
+    transition: all 0.05s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 window#waybar {
@@ -9,8 +11,10 @@ window#waybar {
     color: #56b6c2;
     /* Gruvbox light text */
     border: 2px solid #212c31;
-    /* border-radius: 9px; */
+     border-radius: 0px;
     margin: 10px 100px;
+    /* A very subtle, hard shadow to give the bar depth without glow */
+    box-shadow: 0 4px 0 0 rgba(33, 44, 49, 0.5);
 }
 
 /* Base module styling */
@@ -47,80 +51,68 @@ window#waybar {
     border: 1px solid #56b6c2;
 }
 
-/* Specific styling for launcher */
-#custom-launcher {
+/* --- Interactive Module Styling --- */
+
+/* Grouping modules with similar base styles for cleaner code */
+#custom-launcher, #mpd, #clock, #window, #bluetooth, #memory, 
+#battery, #custom-power, #power-profiles-daemon, #network, 
+#custom-brightness, #custom-volume {
     background-color: #212c31;
     color: #56b6c2;
-    /* border-radius: 6px; */
-    /*border: solid 2px #56b6c2;*/
-    padding: 4px 8px;
-    margin: 2px;
-}
-
-#mpd {
-    background-color: #212c31;
-    color: #cc241d;
-    /* border-radius: 6px; */
-    /* padding: 2px 7px; */
-    margin: 2px;
-
-}
-
-#clock {
-    background-color: #212c31;
-    /*border: solid 2px #56b6c2;*/
-    color: #56b6c2;
-    /* border-radius: 6px; */
     padding: 2px 6px;
-    margin: 2px;
+    margin: 7px 1px;
+    /* Ensure no shadow by default */
+    box-shadow: inset 0 0 0 0 transparent;
 }
 
+/* Specific overrides remain */
+#custom-launcher { padding: 4px 8px; }
+#window { padding: 2px 3px; }
+#mpd { color: #cc241d; }
 
-#window {
+/* New Hover Effect: Sharp bottom highlight instead of color swap */
+#custom-launcher:hover, #clock:hover, #custom-power:hover, 
+#network:hover, #bluetooth:hover, #power-profiles-daemon:hover,
+#custom-volume:hover, #custom-brightness:hover {
     background-color: #212c31;
-    /*border: solid 2px #56b6c2;*/
     color: #56b6c2;
-    /* border-radius: 6px; */
-    padding: 2px 3px;
-    margin: 2px;
+    /* This creates a 3px thick cyan line at the bottom inside the border */
+    box-shadow: inset 0 -3px 0 0 #56b6c2;
 }
 
-/* Center module container */
+/* MPD Hover - red highlight */
+#mpd:hover {
+     box-shadow: inset 0 -3px 0 0 #cc241d;
+}
+
+
+/* Center module container pattern */
+/* Center module container - Restoring your brackets! */
 .modules-center {
     background-color: #212c31;
     color: #56b6c2;
     padding: 2px 3px;
     margin: 2px;
-
     background-image:
         linear-gradient(to bottom, transparent 20%, #56b6c2 20%, #56b6c2 80%, transparent 80%),
         linear-gradient(to bottom, transparent 20%, #56b6c2 20%, #56b6c2 80%, transparent 80%);
     background-position: left center, right center;
     background-repeat: no-repeat;
     background-size: 2px 100%;
-
 }
 
-
-/* Right-aligned modules */
-.modules-right {
-    /* background-color: #212c31; */
-    /* border-radius: 6px; */
-    padding: 2px 3px;
-    margin: 3px 3px;
+.modules-right{
+  margin-right : 10px;
 }
 
-.modules-left {
-    /* border-radius: 6px; */
-    padding: 2px 3px;
-    margin: 3px 3px;
+.modules-left{
+  margin-left : 10px;
 }
+
 
 /* Workspaces container */
 #workspaces {
     background-color: #212c31;
-    /* border-radius: 6px; */
-    /*border: solid 2px #56b6c2;*/
     padding: 0;
     margin: 5px;
 }
@@ -133,9 +125,9 @@ window#waybar {
     background-color: transparent;
     color: #4b6563;
     border-radius: 0;
+    box-shadow: none; /* remove my underline */
 }
 
-/* Round outer buttons only */
 #workspaces button:first-child {
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
@@ -150,6 +142,7 @@ window#waybar {
 #workspaces button:hover {
     background-color: #3c3836;
     color: #ebdbb2;
+    box-shadow: none; 
 }
 
 /* Focused/active */
@@ -157,81 +150,24 @@ window#waybar {
 #workspaces button.active {
     background-color: #212c31;
     color: #56b6c2;
+    box-shadow: none;
 }
 
 /* Urgent workspace */
 #workspaces button.urgent {
     background-color: #cc241d;
-
     color: #fbf1c7;
+    box-shadow: none;
 }
 
-
-
-
-
-#mpd {
-    background-color: #212c31;
-    color: #56b6c2;
-}
-
-#bluetooth {
-    background-color: #212c31;
-    color: #56b6c2;
-    margin: 2px;
-
-}
-
-#window {
-    background-color: #212c31;
-    color: #56b6c2;
-}
-
-#memory {
-    background-color: #212c31;
-    /* border-radius: 6px; */
-    /* margin: 2px; */
-
-    color: #56b6c2;
-    padding: 2px 6px;
-    margin: 2px;
-}
-
-#battery {
-    background-color: #212c31;
-    /* border-radius: 6px; */
-    /* margin: 2px; */
-
-    color: #56b6c2;
-    padding: 2px 6px;
-    margin: 2px;
-}
-
-#custom-power {
-    background-color: #212c31;
-    /* border-radius: 6px; */
-    margin: 2px;
-
-    color: #56b6c2;
-    /* padding: 2px 6px; */
-    margin: 2px;
-
-}
-
-#power-profiles-daemon {
-    background-color: #212c31;
-    /* border-radius: 6px; */
-    margin: 2px;
-
-    color: #56b6c2;
-
-
-}
+/* --- Battery States --- */
 
 #battery.charging,
 #battery.plugged {
-    color: #56b6c2;
+    color: #689d6a; /* Greenish for charging */
     background-color: #212c31;
+    /* Add a subtle green bottom highlight while charging */
+    box-shadow: inset 0 -2px 0 0 #689d6a;
 }
 
 #battery.critical:not(.charging) {
@@ -244,87 +180,46 @@ window#waybar {
     animation-direction: alternate;
 }
 
-#network {
-    background-color: #212c31;
-    /* border-radius: 6px; */
 
-    color: #56b6c2;
-    margin: 2px;
+/* --- Audio Slider Styling --- */
 
-}
-
-#custom-brightness {
-    background-color: #212c31;
-    margin: 2px;
-}
-
-#custom-volume {
-    background-color: #212c31;
-    margin: 2px;
-}
-
-
-/* Common look */
 #pulseaudio,
 #pulseaudio-slider {
     background-color: #212c31;
-
     color: #56b6c2;
     padding: 2px 3px;
     margin-top: 2px;
     margin-bottom: 2px;
-
-
-
 }
 
-/* Left side (icon + %) - WITH LEFT BORDER for the "[" */
-#pulseaudio {
-    /* border-top-left-radius: 6px; */
-    /* border-bottom-left-radius: 6px; */
-    border-right: none;
-    /* This acts as the opening bracket "[" */
-    /* border-left: 2px solid #56b6c2; */
-    padding-left: 8px;
-    /* Add some space after the bracket */
-}
+#pulseaudio { padding-left: 8px; }
 
-/* Right side (slider) - WITH RIGHT BORDER for the "]" */
-#pulseaudio-slider {
-    /* border-top-right-radius: 6px; */
-    /* border-bottom-right-radius: 6px; */
-    /* This acts as the closing bracket "]" */
-    /* border-right: 2px solid #56b6c2; */
-}
-
-/* --- THE ASCII PATTERN --- */
+/* The ASCII Pattern Slider Base */
 #pulseaudio-slider trough {
     min-height: 1em;
     border: none;
     min-width: 70px;
     border-radius: 0;
-    border: none;
-
-    /* Base color for the empty part */
     background-color: #212c31;
-    /* This gradient creates the dotted "░" pattern */
+    /* The dotted pattern */
     background-image: repeating-radial-gradient(circle at center,
             #56b6c2,
             #56b6c2 0.5px,
             transparent 1px,
             transparent 100%);
     background-size: 3px 3px;
+    opacity: 0.5; /* Dim the unfilled part slightly */
 }
 
+/* The filled part of the slider */
 #pulseaudio-slider highlight {
-    /* This is the solid "█" part */
     background-color: #56b6c2;
     border: none;
     border-radius: 0;
+    opacity: 1;
 }
 
 #pulseaudio-slider slider {
-    /* Keep the knob hidden */
     opacity: 0;
     background: none;
     border: none;
@@ -338,6 +233,8 @@ window#waybar {
 #pulseaudio.muted {
     background-color: #212c31;
     color: #cc241d;
+    /* Add red highlight when muted */
+    box-shadow: inset 0 -2px 0 0 #cc241d;
 }
 
 /* Cava Visualizer */
@@ -346,7 +243,7 @@ window#waybar {
     color: #689d6a;
     border-radius: 3px;
     font-family: "Iosevka Nerd Font";
-    border: solid 2px;
+    border: solid 2px #689d6a; /* Changed border color to match text */
     padding: 2px 12px;
     margin: 8px 4px;
 }
@@ -359,10 +256,5 @@ window#waybar {
 }
 
 /* Edge fixes */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
-}
-
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
-}
+.modules-left>widget:first-child>#workspaces { margin-left: 0; }
+.modules-right>widget:last-child>#workspaces { margin-right: 0; }

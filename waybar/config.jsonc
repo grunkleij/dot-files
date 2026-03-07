@@ -9,7 +9,7 @@
         "clock",
         "bluetooth",
         "custom/brightness",
-        "hyprland/window"
+        "hyprland/window",
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -268,5 +268,14 @@
         "format": "⏻ ",
         "tooltip": false,
         "on-click": "wlogout"
+    },
+
+    
+   
+    "custom/task": {
+        "format": "  {}",
+        "exec": "cat ~/.current_task || echo 'No active task'",
+        "interval": 2,
+        "on-click": "kitty -e sh -c 'echo \"What are you working on?\" && read task && echo \"$task\" > ~/.current_task'"
     }
 }
